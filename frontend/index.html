@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make Churchill Meal Deals Great Again</title>
+    <meta name="description" content="Restore Churchill College meal deals." />
+  </head>
+  <body>
+    <div id="app">
+      <div class="page-shell">
+        <header class="topbar">
+          <div class="brand-block">
+            <span class="brand-badge">Churchill College</span>
+            <span class="brand-tag">Meal deal protest</span>
+          </div>
+          <div class="topbar-actions">
+            <a href="#petition">Sign the petition</a>
+          </div>
+        </header>
+
+        <main class="campaign-layout">
+          <section class="hero-copy">
+            <p class="eyebrow">Same price. Worse deal.</p>
+            <h1>Bring back the proper Churchill meal deal.</h1>
+            <p class="summary">
+              It still costs the same, but the barista drinks are gone, the cakes have vanished, and the canned drinks list keeps getting smaller. We're paying for a meal deal which is worse in every way and the same price.
+            </p>
+
+            <div class="stats-row">
+              <div class="stat-box">
+                <strong>£4.95</strong>
+                <span>still the same</span>
+              </div>
+              <div class="stat-box">
+                <strong>0</strong>
+                <span>barista drinks</span>
+              </div>
+              <div class="stat-box">
+                <strong>1000</strong>
+                <span>disappointment</span>
+              </div>
+            </div>
+
+            <div class="objective-panel">
+              <h2>What we want</h2>
+              <ul>
+                <li>Barista drinks back in the meal deal.</li>
+                <li>Cakes and pastries back on the deal.</li>
+                <li>More than eight terrible canned drinks to choose from.</li>
+                <li>Stop acting like this is still a bargain.</li>
+              </ul>
+            </div>
+          </section>
+        </main>
+
+        <section id="petition" class="petition-section">
+          <div class="petition-header">
+            <div>
+              <p class="eyebrow">Fight for easter term study sessions</p>
+              <h2>Sign or risk getting a 2.2</h2>
+            </div>
+          </div>
+
+          <form id="petition-form" class="petition-form">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+
+            <label>
+              Occupation
+              <input type="text" name="department" placeholder="e.g. Churchill student" required />
+            </label>
+
+            <label>
+              Why this matters
+              <textarea name="reason" rows="4"></textarea>
+            </label>
+
+            <button type="submit" class="primary-button">Submit complaint</button>
+          </form>
+
+          <div id="petition-status" class="petition-status" aria-live="polite">
+            Please sign today.
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
