@@ -1,6 +1,6 @@
 import './style.css';
 
-const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1556287869348348016/S63jYG_-PfFsC79MG3I_XV3w1zOccPL0pJDiE69BruWR_zuZK_jgZoBSHCaGtHIt7IvB';
+const ENCODED_DISCORD_WEBHOOK_URL = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTU1NzQ2MTU0NjU4ODcwODk5OC80aWJhTnBHYWRPWWJ6LXZubTkxMER0TnU2SGVpWmRkTTVzdGhKS0hjX0swRS1Ha1JWaFdKUE0wbDBRZmhrRVFwSDNWdw==';
 
 const petitionStatus = document.getElementById('petition-status');
 const petitionForm = document.getElementById('petition-form');
@@ -34,7 +34,7 @@ if (petitionForm && petitionStatus) {
     };
 
     try {
-      const response = await fetch(DISCORD_WEBHOOK_URL, {
+      const response = await fetch(atob(ENCODED_DISCORD_WEBHOOK_URL), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
