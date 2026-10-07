@@ -211,6 +211,53 @@ a {
   gap: 6px;
 }
 
+/* Quotes */
+
+.quotes-section {
+  margin-top: 44px;
+}
+
+.quotes-section h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.quote-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 28px;
+  background: var(--panel);
+  border-left: 4px solid var(--brand);
+  border-radius: 4px;
+}
+
+.quote-card p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+}
+
+.quote-card cite {
+  display: block;
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: normal;
+  text-align: right;
+}
+
 /* Petition */
 
 .petition-section {
@@ -332,7 +379,8 @@ a {
   }
 
   .stats-row,
-  .petition-form {
+  .petition-form,
+  .quotes-grid {
     grid-template-columns: 1fr;
   }
 }
