@@ -224,9 +224,32 @@ a {
   color: var(--text);
 }
 
+.names-ticker {
+  overflow: hidden;
+  margin-bottom: 22px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  color: var(--brand-dark);
+  white-space: nowrap;
+}
+
+.names-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: names-ticker-scroll 35s linear infinite;
+}
+
+.names-ticker-copy {
+  flex: 0 0 auto;
+  padding-right: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .quotes-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
   margin-top: 18px;
 }
@@ -234,18 +257,27 @@ a {
 .quote-card {
   display: flex;
   flex-direction: column;
+  height: 190px;
+  min-width: 0;
   margin: 0;
-  padding: 28px;
+  padding: 20px;
   background: var(--panel);
   border-left: 4px solid var(--brand);
   border-radius: 4px;
+  animation: quote-card-in 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .quote-card p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   font-weight: 700;
   color: var(--brand-dark);
+  white-space: pre-line;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
 .quote-card cite {
@@ -256,6 +288,28 @@ a {
   font-size: 0.9rem;
   font-style: normal;
   text-align: right;
+}
+
+@keyframes quote-card-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes names-ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Petition */
@@ -382,5 +436,19 @@ a {
   .petition-form,
   .quotes-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .quote-card {
+    animation: none;
+  }
+
+  .names-ticker-track {
+    animation: none;
   }
 }
